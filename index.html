@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Math graphs</title>
+	<link rel="stylesheet" href="css/page.css">
+	<link rel="stylesheet" href="css/sidebar.css">
+	<link rel="stylesheet" href="css/formulas-list.css">
+	<link rel="stylesheet" href="css/svg-canvas.css">
+</head>
+<body class="page">
+	<div class="sidebar">
+		<div class="sidebar__title">
+			Формулы
+		</div>
+		<ul class="formulas-list">
+			<li class="formulas-list__item" data-formula-id="a*y=b*x">
+				<input type="text" class="formulas-list__input js-formula-variable" value="1" data-variable="a">
+				* y =
+				<input type="text" class="formulas-list__input js-formula-variable" value="1" data-variable="b">
+				* x
+				<button type="button" class="formulas-list__button js-draw-graph">ok</button>
+			</li>
+			<li class="formulas-list__item" data-formula-id="y^a=x^b">
+				y ^
+				<input type="text" class="formulas-list__input js-formula-variable" value="1" data-variable="a">
+				= x ^
+				<input type="text" class="formulas-list__input js-formula-variable" value="1" data-variable="b">
+				<button type="button" class="formulas-list__button js-draw-graph">ok</button>
+			</li>
+		</ul>
+	</div>
+
+	<svg class="svg-canvas">
+		<style>
+			path
+				{
+					z-index: 2;
+				}
+			.grid
+				{
+					z-index: 0;
+				}
+		</style>
+	</svg>
+
+	<script src="js/create-canvas.js"></script>
+	<script src="js/draw-graph.js"></script>
+
+</body>
+</html>
