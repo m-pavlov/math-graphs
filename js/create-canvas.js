@@ -8,7 +8,7 @@ var svg = (function(){
 		el_width, el_height, el_x_center, el_y_center, x_max,
 		tmp, len, i;
 
-	redraw();
+    redraw();
 
 	return {
 		el: el,
@@ -25,9 +25,9 @@ var svg = (function(){
 	function redraw() {
 		clearGrid();
 
-		el_width 	= el.offsetWidth;
+		el_width 	= parseInt(el.getBoundingClientRect().width);
 		el_x_center = el_width / 2;
-		el_height 	= el.offsetHeight;
+		el_height 	= parseInt(el.getBoundingClientRect().height);
 		el_y_center = el_height / 2;
 		x_max 		= el_x_center / unit;
 		xLines();

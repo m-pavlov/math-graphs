@@ -19,8 +19,6 @@ var graph = (function(svg){
 		.getElementsByClassName('sidebar')[0]
 		.addEventListener('click', startDraw);
 
-
-
 	return {
 		draw: draw
 	}
@@ -97,6 +95,5 @@ var graph = (function(svg){
 
 		svg.el.appendChild(p);
 	}
-
 
 })(svg);
